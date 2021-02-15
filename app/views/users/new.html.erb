@@ -1,12 +1,12 @@
-<h1 class="title">New User<h1>
+<h1 class="title">New User</h1>
 <div class="form">
     <%= form_for @user do |f| %>
         <%= f.label :username %>
         <%= f.text_field :username %><br>
         <%= f.label :password %>
         <%= f.password_field :password %><br>
-        <%= f.label :password_confrimation %>
-        <%= f.password_field :password_confrimation %><br>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %><br>
         <%= f.submit %>
     <% end %>
 </div>
