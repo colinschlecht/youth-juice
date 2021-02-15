@@ -1,4 +1,11 @@
-<h1 class="title">New User</h1>
+<h2 class="title">Create a new user</h2>
+<div class="error_messge">
+    <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |msg| %>
+            <%= msg %>
+        <% end %>
+    <% end %>
+</div>
 <div class="form">
     <%= form_for @user do |f| %>
         <%= f.label :username %>
