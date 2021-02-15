@@ -10,19 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_12_182109) do
+ActiveRecord::Schema.define(version: 2021_02_15_183612) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "type"
+    t.string "ingredient_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "portfolios", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "recipe_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "recipe_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recipe_id"], name: "index_portfolios_on_recipe_id"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 2021_02_12_182109) do
   end
 
   create_table "recipe_ingredients", force: :cascade do |t|
-    t.integer "recipe_id", null: false
-    t.integer "ingredient_id", null: false
+    t.bigint "recipe_id", null: false
+    t.bigint "ingredient_id", null: false
     t.float "measurement"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -48,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_02_12_182109) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.string "bio"
     t.string "favorite_drink"
     t.datetime "created_at", precision: 6, null: false
