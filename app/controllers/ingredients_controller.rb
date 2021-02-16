@@ -39,4 +39,8 @@ class IngredientsController < ApplicationController
     def ingredient_params
         params.require(:ingredient).permit(:name, :description, :ingredient_type)
     end
+
+    def ingredient_type
+        @ingregident_type = ["alcohol",]
+    end
 end
