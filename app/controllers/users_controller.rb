@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     private
 
     def find_user
-        @user = User.find(@user.id)
+        @user = User.find(session[:user_id])
     end
     
     def user_params
