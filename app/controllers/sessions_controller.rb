@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
 
+    def home
+        render :home
+    end
+
     def new
     end
 
@@ -13,5 +17,10 @@ class SessionsController < ApplicationController
             flash[:notice] = "No matching account found."
             render :new
         end
+    end
+
+    def logout
+        session.delete :user_id
+        redirect_to root_path
     end
 end
