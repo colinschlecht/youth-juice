@@ -10,6 +10,20 @@
 
     <%= f.label :name %>
     <%= f.text_field :name %>
+
+    <div id="ingredients">
+    <h3>ingredients</h3>
+    <%= f.fields_for :ingredients, @recipe.ingredients.build do |t| %>
+        <%= t.label :name %>
+        <%= t.text_field :name, list: "ingredients_autocomplete" %>
+            <datalist id="ingredients_autocomplete">
+            <% @ingredients.each do |ingredient| %>
+            <option value="<%= ingredient.name %>">
+            <% end %>
+            </datalist>
+            <br>
+    <% end %>
+    </div>
     <%= f.submit %>
 <% end %>
 </div>
