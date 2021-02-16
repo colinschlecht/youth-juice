@@ -1,5 +1,7 @@
 <h2>Log In</h2>
+<div class="error_messge">
     <%= flash[:notice] %>
+</div>
 <div class="form">
     <%= form_tag(sessions_path) do %>
         <%= label_tag "User Name" %>

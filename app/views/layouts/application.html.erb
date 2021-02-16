@@ -14,7 +14,11 @@
     <%= link_to "Account", user_path(session[:user_id]) %>
     <%= link_to "All Recipe", recipes_path %>
     <%= link_to "Create a new drink", new_recipe_path %>
-   
+    <% if session[:user_id] %>
+      <%= link_to "Log Out", logout_path %>
+    <% else %>
+      <%= link_to "Log in", new_session_path %>
+    <% end %>
     
   </nav>
 

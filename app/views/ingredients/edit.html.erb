@@ -1,0 +1,10 @@
+<h2>Editing<%= @ingredient %></h2>
+<div class="form">
+    <%= form_for @ingredient do |f| %>
+        <%= f.label "Name" %>
+        <%= f.text_field :name %>
+        <%= f.label "Type" %>
+        <%= f.text_field :ingredient_type %>
+        <%= f.label "Description" %>
+        <%= f.area_field :description %>
+</div>
