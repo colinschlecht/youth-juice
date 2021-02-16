@@ -1,24 +1,50 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Styling and Formatting Notes:
+* add notes here for preferences on styling and formatting.
+* this will become important when applying bootstrap as layouts.
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+# User-Stories and To-Do List:
 
-* Database creation
+## Dev Stories
+(General to do list for PanPan and ColCol)
 
-* Database initialization
+* The form to create a recipe should generate a recipe, while also generating a new ingredient object and associates them in the join table. 
+Pan should cook some chicken.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## User Stories
 
-* Deployment instructions
+1. When creating a recipe, a user should be able to “add” a field for ingredients in the user interface, in order to add multiple ingredients to the recipe. 
 
-* ...
+2. When editing a recipe, the ingredient list should be persisted for that item, so the user does not have to re-select those ingredients. (This may be dependent on story 1)
+
+3. When deleting user account, the user session should also be terminated. (Dependent destroy?)
+
+4. A user should be required to log in before viewing the rest of the site.
+
+## Bicycle
+
+1. A user should have a “portfolio” or “profile” that will display the users drinks - as their public profile.
+
+2. A user should be able to view other user “portfolio” or “profiles”
+(Think portfolio == public / ‘user show page’ == private)
+
+
+## Car
+
+A user should be able to create a friends list.
+
+2. Drink boards
+
+	* A user should be able to view all user activity as a timeline.
+
+	* A user should be able to view all friend activity.
+
+3. A user should be able to add other user’s drinks from their portfolio to their portfolio.
+(Think of having a share button on a drink).
+
+
+
