@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new', as: 'login'
   post '/sessions', to: 'sessions#create'
   post '/sessions', to: 'sessions#logout', as: 'logout'
+<<<<<<< HEAD
+=======
+  get '/', to: 'sessions#home', as: 'root'
+>>>>>>> origin/colin-wip-postgres
 end
