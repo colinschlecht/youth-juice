@@ -1,0 +1,15 @@
+<%= form_for @recipe do |f| %>
+    <div class="form">
+    <% if @recipe.errors.any? %>
+        <ul>
+            <% @recipe.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    <% end %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+<% end %>
+</div>
