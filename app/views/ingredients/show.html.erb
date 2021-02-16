@@ -3,4 +3,4 @@
 <p><%= @ingredient.description %></p>
 
 <%= button_to "Edit Info", edit_ingredient_path(@ingredient) %>
-<%= button_to "Delete", %>
+<%= button_to "Delete", @ingredient, method: delete %>
