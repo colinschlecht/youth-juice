@@ -1,5 +1,21 @@
 class UsersController < ApplicationController
-    before_action :find_user, only: :show
+    before_action :find_user, only: [:show, :edit, :update, :destroy]
+
+
+    def show
+        @recipes = @user.recipes.all
+    end
+
+    def edit
+    end
+
+    def update
+        if @user.update(user_params)
+        redirect_to @user
+        else 
+            render :edit  
+        end
+    end
 
     def new
         @user = User.new
@@ -15,11 +31,17 @@ class UsersController < ApplicationController
         end
     end
 
+    def destroy
+        @user.destroy
+        redirect_to root_path
+    end
+
     private
 
     def find_user
         @user = User.find(session[:user_id])
     end
+
     
     def user_params
         params.require(:user).permit(:username, :password, :password_confirmation, :bio, :favorite_drink)

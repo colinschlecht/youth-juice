@@ -12,8 +12,4 @@ class Recipe < ApplicationRecord
             recipe_ingredient = RecipeIngredient.find_or_create_by(recipe: self, ingredient: ingredient)
         end
     end
-
-    def ingredient_attributes
-        self.ingredients ? self.ingredients : nil
-    end
 end

@@ -1,0 +1,27 @@
+<div class="error_messge">
+    <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |msg| %>
+            <%= msg %>
+        <% end %>
+    <% end %>
+</div>
+<div class="form">
+    <%= form_for @user do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username %><br>
+        <%= f.label :password %>
+        <%= f.password_field :password %><br>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %><br>
+        <br>
+        <i>Optional</i> <br>
+        <%= f.label :favorite_drink %>
+        <%= f.text_field :favorite_drink%><br>
+        <%= f.label :bio %>
+        <%= f.text_area :bio %><br>
+        <%= f.submit %>
+    <% end %>
+</div>
+
+<p>Remembered you already have an account?</p>
+<button class="main_log_button"> <%= link_to "Click Here to Log In", new_user_path %></button>

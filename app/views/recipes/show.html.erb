@@ -1,8 +1,19 @@
 
-<%=@recipe.name %>
+<h1><%=@recipe.name %></h1>
+<div class="description">
+<h1><%=@recipe.description %><h1>
+</div>
+<ul>
 <% @recipe.ingredients.each do |i|%>
-<%= i.name  %>
-<%= i.description %>
+<li><%= i.name  %></li>
+<div class="description">
+<li><%= i.description %></li>
+</div>
 <% end %>
+</ul>
+
+
+<button><%= link_to "Edit Info", edit_recipe_path(@recipe) %></button>
+<%= button_to "Delete", @recipe, method: :delete %>
 
 
