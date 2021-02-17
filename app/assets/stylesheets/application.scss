@@ -1,3 +1,59 @@
 @import "bootstrap/scss/bootstrap";
 
+$white: white;
+$black: black;
 
+.navbar {
+        margin-bottom: 20;
+        background:	#16c79a;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body {
+        background: #f5f4f4;
+        color: #581913;
+        font-family: 'Merriweather', sans-serif;
+}
+h1,
+h2 {
+        font-weight: bold;
+}
+p {
+        font-size: 16px;
+        color: $white;
+}
+a:visited {
+        color: $black;
+}
+.jumbotron {
+        background: #0048CD;
+        color: $white;
+        text-align: center;
+        p {
+                color: $white;
+                font-size: 26px;
+        }
+}
+.link {
+        color: $white;
+}
+.btn-primary {
+        color: $white;
+        border-color: $white;
+        margin-bottom: 5px;
+}
+.btn-sm {
+        background-color: $white;
+        display: inline-block;
+}
+img,
+video,
+audio {
+        margin-top: 20px;
+        max-width: 80%;
+}
+caption {
+
+        float: left;
+        clear: both;
+
+}
