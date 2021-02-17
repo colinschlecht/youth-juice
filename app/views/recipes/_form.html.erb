@@ -19,9 +19,14 @@
             <datalist id="ingredients_autocomplete">
             <% @ingredients.each do |ingredient| %>
             <option value="<%= ingredient.name %>">
-            <% end %>
             </datalist>
             <br>
+        <%= t.label :ingredient_type %>
+        <%= t.text_field :ingredient_type %>
+        <%= t.label :description %>
+        <%= t.text_area :description %>
+            <br>
+        <% end %>
     <% end %>
     </div>
     <%= f.submit %>
