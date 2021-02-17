@@ -23,13 +23,13 @@
 <div class="ingredients">
     <h5>Add Ingredient</h5>
 
-    <%= form.fields_for :recipe_ingredients, recipe.recipe_ingredients do |t| %>
+    <%= form.fields_for :recipe_ingredients, recipe.recipe_ingredients.build do |t| %>
+        <%= t.collection_check_boxes :ingredient_id, @ingredients, :id, :name %>
    <br>
-        <%= t.collection_check_boxes :recipe_ids, @ingredients, :id, :name %>
     <% end%>
 
     <h5>Unlisted Ingredient</h5>
-    <%= form.fields_for :ingredients, recipe.ingredients do |tt|%>
+    <%= form.fields_for :ingredients, recipe.ingredients.build do |tt|%>
         <%= tt.label :name %>
         <%= tt.text_field :name %>
         <br>
