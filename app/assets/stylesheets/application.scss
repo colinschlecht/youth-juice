@@ -1,7 +1,10 @@
 @import "bootstrap/scss/bootstrap";
 
+
+
 $white: white;
 $black: black;
+
 
 .navbar {
         margin-bottom: 20;
@@ -9,8 +12,8 @@ $black: black;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body {
-        background: #f5f4f4;
-        color: #581913;
+        background: #bdbcbc80;
+        color: #000000;
         font-family: 'Merriweather', sans-serif;
 }
 h1,
@@ -41,6 +44,11 @@ a:visited {
         border-color: $white;
         margin-bottom: 5px;
 }
+.btn-secondary {
+        color: $white;
+        border-color: $white;
+        margin-bottom: 5px;
+}
 .btn-sm {
         background-color: $white;
         display: inline-block;
@@ -55,5 +63,7 @@ caption {
 
         float: left;
         clear: both;
+
+
 
 }

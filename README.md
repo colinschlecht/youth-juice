@@ -10,10 +10,9 @@
 
 ## Dev Stories (General to do list for PanPan and ColCol)
 
-Ingredients are created with null values - how can we stop that?
-required name, validation works on individual ingredient creation but NOT nested ingredient. 
-
-Error: "ActiveRecord::NotNullViolation in RecipesController#create"
+DONE Ingredients are created with null values - how can we stop that?
+	required name, validation works on individual ingredient creation but NOT nested ingredient. 
+	Error: "ActiveRecord::NotNullViolation in RecipesController#create"
 
 
 DONE * The form to create a recipe should generate a recipe, while also generating a new ingredient object and associates them in the join table. 
