@@ -50,6 +50,7 @@ class RecipesController < ApplicationController
     def find_recipe
         @recipe = Recipe.find(params[:id])
     end
+    
     def ingredient_type
         @ingredient_type = ["alcohol", "mixer", "garnish", "vessel"]
     end
