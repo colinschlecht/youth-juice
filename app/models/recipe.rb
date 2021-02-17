@@ -4,9 +4,8 @@ class Recipe < ApplicationRecord
     has_many :recipe_ingredients, dependent: :destroy
     has_many :ingredients, through: :recipe_ingredients
     validates_associated :ingredients
-    validates :ingredients, presence: true
 
-    accepts_nested_attributes_for :recipe_ingredients
+    # accepts_nested_attributes_for :recipe_ingredients
     accepts_nested_attributes_for :ingredients, reject_if: lambda{|attrs| attrs['name'].blank?}
 
     # def ingredients_attributes=(ingredients_attributes)
