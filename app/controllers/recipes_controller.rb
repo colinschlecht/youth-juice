@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
     before_action :find_recipe, only: [:show, :edit, :update, :destroy]
+    before_action :ingredient_type, only: [:show, :new, :create, :edit, :update, :destroy]
 
     def index
         @recipes = Recipe.all
@@ -48,6 +49,9 @@ class RecipesController < ApplicationController
 
     def find_recipe
         @recipe = Recipe.find(params[:id])
+    end
+    def ingredient_type
+        @ingredient_type = ["alcohol", "mixer", "garnish", "vessel"]
     end
 
 end

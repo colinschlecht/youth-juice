@@ -41,6 +41,6 @@ class IngredientsController < ApplicationController
     end
 
     def ingredient_type
-        @ingregident_type = ["alcohol","mixer","garnish"]
+        @ingregident_type = ["alcohol","mixer","garnish","vessel"]
     end
 end
