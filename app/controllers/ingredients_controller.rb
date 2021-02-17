@@ -1,6 +1,7 @@
 class IngredientsController < ApplicationController
 
-    before_action :find_ingredient, only: [:show, :eidt, :update, :destroy]
+    before_action :find_ingredient, only: [:show, :edit, :update, :destroy]
+    before_action :ingredient_type
 
     def index
         @ingredients = Ingredient.all
@@ -15,7 +16,12 @@ class IngredientsController < ApplicationController
     end
 
     def create
-        
+        @ingredient = Ingredient.new(ingredient_params)
+        if @ingredient.save
+            redirect_to @ingredient
+        else
+            render :new
+        end
     end
 
     def edit
@@ -45,5 +51,9 @@ class IngredientsController < ApplicationController
 
     def ingredient_params
         params.require(:ingredient).permit(:name, :description, :ingredient_type)
+    end
+
+    def ingredient_type
+        @ingredient_type = ["alcohol","mixer","garnish","vessel"]
     end
 end

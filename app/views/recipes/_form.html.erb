@@ -11,21 +11,25 @@
 
 <%= form_with(model: recipe, local: true) do |form| %>
 
+<div class="drink-description">
     <%= form.label :name %>
     <%= form.text_field :name %>
+    <br>
+    <%= form.label :drink_description%>
+    <br>
+    <%= form.text_area :description%>
+</div> <br>
 
-<div id="ingredients">
-
-    <h3>ingredients</h3>
+<div class="ingredients">
+    <h5>Add Ingredient</h5>
 
     <%= form.fields_for :ingredients, recipe.ingredients do |t| %>
+   <br>
+    <%= t.collection_check_boxes :name, @ingredients, :name, :name %>
+
+    <h5>Unlisted Ingredient</h5>
     <%= t.label :name %>
-    <%= t.text_field :name, list: "ingredients_autocomplete" %>
-        <datalist id="ingredients_autocomplete">
-        <% @ingredients.each do |ingredient| %>
-        <option value="<%= ingredient.name %>">
-        <% end %>
-        </datalist>
+    <%= t.text_field :name %>
     <br>
     <%= t.label :ingredient_type %>
     <%= t.select :ingredient_type, @ingredient_type %>
