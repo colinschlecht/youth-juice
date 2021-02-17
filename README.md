@@ -11,8 +11,9 @@
 ## Dev Stories
 (General to do list for PanPan and ColCol)
 
+Ingredients are created with null values - how can we stop that?
+
 DONE * The form to create a recipe should generate a recipe, while also generating a new ingredient object and associates them in the join table. 
-Pan should cook some chicken.
 
 
 ## User Stories

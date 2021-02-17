@@ -27,7 +27,9 @@ class IngredientsController < ApplicationController
     end 
 
     def destroy
-
+        find_ingredient
+        @ingredient.delete
+        redirect_to ingredients_path
     end
 
     private
