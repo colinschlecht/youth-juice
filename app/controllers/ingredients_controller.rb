@@ -1,6 +1,7 @@
 class IngredientsController < ApplicationController
 
-    before_action :find_ingredient, only: [:show, :eidt, :update]
+    before_action :find_ingredient, only: [:show, :edit, :update]
+    before_action :ingredient_type
 
     def index
         @ingredients = Ingredient.all
@@ -15,7 +16,12 @@ class IngredientsController < ApplicationController
     end
 
     def create
-        
+        @ingredient = Ingredient.new(ingredient_params)
+        if @ingredient.save
+            redirect_to @ingredient
+        else
+            render :new
+        end
     end
 
     def edit
@@ -43,6 +49,6 @@ class IngredientsController < ApplicationController
     end
 
     def ingredient_type
-        @ingregident_type = ["alcohol","mixer","garnish","vessel"]
+        @ingredient_type = ["alcohol","mixer","garnish","vessel"]
     end
 end

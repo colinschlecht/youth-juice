@@ -8,23 +8,27 @@
 
 # User-Stories and To-Do List:
 
-## Dev Stories
-(General to do list for PanPan and ColCol)
+## Dev Stories (General to do list for PanPan and ColCol)
 
 Ingredients are created with null values - how can we stop that?
+required name, validation works on individual ingredient creation but NOT nested ingredient. 
+
+Error: "ActiveRecord::NotNullViolation in RecipesController#create"
+
 
 DONE * The form to create a recipe should generate a recipe, while also generating a new ingredient object and associates them in the join table. 
 
 
 ## User Stories
 
-1. When creating a recipe, a user should be able to “add” a field for ingredients in the user interface, in order to add multiple ingredients to the recipe. 
+1. (may not be possible with ruby limitations) When creating a recipe, a user should be able to “add” a field for ingredients in the user interface, in order to add multiple ingredients to the recipe. 
 
 * DONE  #When editing a recipe, the ingredient list should be persisted for that item, so the user does not have to re-select those ingredients. (This may be dependent on story 1)
 
 * DONE  #When deleting user account, the user session should also be terminated. (Dependent destroy?)
 
 * DONE # A user should be required to log in before viewing the rest of the site.
+
 
 ## Bicycle
 
@@ -34,6 +38,10 @@ DONE * The form to create a recipe should generate a recipe, while also generati
 (Think portfolio == public / ‘user show page’ == private)
 
 3. A user show page is private?
+
+4. recipe creation improvements 
+	- lists attributes of ingredients with name
+5. 
 
 
 ## Car
