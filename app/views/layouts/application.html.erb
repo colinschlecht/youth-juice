@@ -11,25 +11,23 @@
   </head>
 
   
-  <nav>
-     <%= link_to "Home", root_path %>
-    <% if session[:user_id] %> 
-       <%= link_to "Account", user_path(session[:user_id]) %> 
-       <% else %> 
-       <% nil %>
-     <% end %> 
-     <%= link_to "All Recipe", recipes_path %> 
-     <%= link_to "All Ingredients", ingredients_path %> 
-     <%= link_to "Create Recipe", new_recipe_path %> 
-     <% if session[:user_id] %> 
-       <%= link_to "Log Out", logout_path %> 
-     <% else %> 
-       <%= link_to "Log in", login_path %> 
-    <% end %> 
-    <% if !session[:user_id] %> 
-    <%= link_to "Sign Up", new_user_path %> 
-    <% end %>
-    
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Youth Juice</a>
+        <%= link_to "Home", root_path %>
+        <% if session[:user_id] %>
+          <%= link_to "Account", user_path(session[:user_id]) %> 
+          <%= link_to "All Recipe", recipes_path %> 
+          <%= link_to "All Ingredients", ingredients_path %> 
+          <%= link_to "Create Recipe", new_recipe_path %> 
+          <%= link_to "Log Out", logout_path %> 
+        <% else %>
+          <%= link_to "Log in", login_path %> 
+          <%= link_to "Sign Up", new_user_path %> 
+        <% end %>
+    </div>
+  </div>
   </nav>
 
   <body>
