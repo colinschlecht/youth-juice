@@ -23,7 +23,7 @@ Pan should cook some chicken.
 
 3. When deleting user account, the user session should also be terminated. (Dependent destroy?)
 
-4. A user should be required to log in before viewing the rest of the site.
+DONE 4. A user should be required to log in before viewing the rest of the site.
 
 ## Bicycle
 
