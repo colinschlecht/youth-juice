@@ -19,11 +19,11 @@ Pan should cook some chicken.
 
 1. When creating a recipe, a user should be able to “add” a field for ingredients in the user interface, in order to add multiple ingredients to the recipe. 
 
-* DONE *. When editing a recipe, the ingredient list should be persisted for that item, so the user does not have to re-select those ingredients. (This may be dependent on story 1)
+* DONE  #When editing a recipe, the ingredient list should be persisted for that item, so the user does not have to re-select those ingredients. (This may be dependent on story 1)
 
-3. When deleting user account, the user session should also be terminated. (Dependent destroy?)
+* DONE  #When deleting user account, the user session should also be terminated. (Dependent destroy?)
 
-DONE 4. A user should be required to log in before viewing the rest of the site.
+* DONE # A user should be required to log in before viewing the rest of the site.
 
 ## Bicycle
 
@@ -31,6 +31,8 @@ DONE 4. A user should be required to log in before viewing the rest of the site.
 
 2. A user should be able to view other user “portfolio” or “profiles”
 (Think portfolio == public / ‘user show page’ == private)
+
+3. A user show page is private?
 
 
 ## Car
@@ -46,5 +48,7 @@ A user should be able to create a friends list.
 3. A user should be able to add other user’s drinks from their portfolio to their portfolio.
 (Think of having a share button on a drink).
 
-
+portfolio -- index = drink board?
+portfolio -- show page = individual page - either show yours or another user.
+user -- show page = that user's "view your profile?" Maybe?
 
