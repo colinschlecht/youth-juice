@@ -1,6 +1,6 @@
-    <% if @recipe.errors.any? %>
+    <% if recipe.errors.any? %>
         <ul>
-            <% @recipe.errors.full_messages.each do |msg| %>
+            <% recipe.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
             <% end %>
         </ul>
@@ -15,31 +15,33 @@
     <%= form.label :name %>
     <%= form.text_field :name %>
     <br>
-    <%= form.label :drink_description%>
+    <%= form.label :drink_description %>
     <br>
-    <%= form.text_area :description%>
+    <%= form.text_area :description %>
 </div> <br>
 
 <div class="ingredients">
     <h5>Add Ingredient</h5>
 
-    <%= form.fields_for :ingredients, recipe.ingredients do |t| %>
+    <%= form.fields_for :recipe_ingredients, recipe.recipe_ingredients do |t| %>
    <br>
-    <%= t.collection_check_boxes :name, @ingredients, :name, :name %>
+        <%= t.collection_check_boxes :recipe_ids, @ingredients, :id, :name %>
+    <% end%>
 
     <h5>Unlisted Ingredient</h5>
-    <%= t.label :name %>
-    <%= t.text_field :name %>
-    <br>
-    <%= t.label :ingredient_type %>
-    <%= t.select :ingredient_type, @ingredient_type %>
-    <br>
-    <%= t.label :description %>
-    <%= t.text_area :description %>
+    <%= form.fields_for :ingredients, recipe.ingredients do |tt|%>
+        <%= tt.label :name %>
+        <%= tt.text_field :name %>
+        <br>
+        <%= tt.label :ingredient_type %>
+        <%= tt.select :ingredient_type, @ingredient_type %>
+        <br>
+        <%= tt.label :description %>
+        <%= tt.text_area :description %>
     <br>
     <% end %>
 </div>
 
-<%= form.submit %>
+    <%= form.submit %>
 <% end %>
 </div>

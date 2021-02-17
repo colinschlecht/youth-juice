@@ -24,7 +24,7 @@ class RecipesController < ApplicationController
     def new
         @ingredients = Ingredient.all
         @recipe = Recipe.new
-        1.times { @recipe.ingredients.build() }
+        1.times { @recipe.ingredients.build }
     end
 
     def create
@@ -34,6 +34,7 @@ class RecipesController < ApplicationController
             redirect_to @recipe
         else
             @ingredients = Ingredient.all
+            1.times { @recipe.ingredients.build() }
             render :new
         end
     end
@@ -45,7 +46,7 @@ class RecipesController < ApplicationController
 
     private
     def recipe_params
-        params.require(:recipe).permit(:name, ingredients_attributes: [:id, :name, :description, :ingredient_type])
+        params.require(:recipe).permit(:name, :description, ingredients_attributes: [:id, :name, :description, :ingredient_type])
     end
 
     def find_recipe

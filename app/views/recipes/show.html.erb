@@ -5,10 +5,10 @@
 </div>
 <ul>
 <% @recipe.ingredients.each do |i|%>
-<li><%= i.name  %></li>
-<div class="description">
-<li><%= i.description %></li>
-</div>
+    <li><%= i.name  %></li>
+    <div class="description">
+    <li><%= i.description %></li>
+    </div>
 <% end %>
 </ul>
 
