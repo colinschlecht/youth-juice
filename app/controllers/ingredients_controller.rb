@@ -37,7 +37,7 @@ class IngredientsController < ApplicationController
             @ingredient.destroy
             redirect_to ingredients_path
         else
-            flash[:notice] = "Can't delete ingredent that are still in use."
+            flash[:notice] = "Can't delete ingredents that are still in use."
             render :show
         end
 

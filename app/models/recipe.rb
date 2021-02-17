@@ -8,13 +8,13 @@ class Recipe < ApplicationRecord
     # accepts_nested_attributes_for :recipe_ingredients
     accepts_nested_attributes_for :ingredients, reject_if: lambda{|attrs| attrs['name'].blank?}
 
-    def ingredients_attributes=(ingredients_attributes)
-        ingredients_attributes.values.each do |ingredient_attribute|
-            ingredient = Ingredient.find_or_create_by(ingredient_attribute)
+    # def ingredients_attributes=(ingredients_attributes)
+    #     ingredients_attributes.values.each do |ingredient_attribute|
+    #         ingredient = Ingredient.find_or_create_by(ingredient_attribute)
 
-            recipe_ingredient = RecipeIngredient.find_or_create_by(recipe: self, ingredient: ingredient)
-        end
-    end
+    #         recipe_ingredient = RecipeIngredient.find_or_create_by(recipe: self, ingredient: ingredient)
+    #     end
+    # end
 
    
 end
