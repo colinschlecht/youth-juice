@@ -1,6 +1,6 @@
 class IngredientsController < ApplicationController
 
-    before_action :find_ingredient, only: [:show, :eidt, :update]
+    before_action :find_ingredient, only: [:show, :eidt, :update, :destroy]
 
     def index
         @ingredients = Ingredient.all
@@ -27,6 +27,13 @@ class IngredientsController < ApplicationController
     end 
 
     def destroy
+        if @ingredient.recipes.count == 0
+            @ingredient.destroy
+            redirect_to ingredients_path
+        else
+            flash[:notice] = "Can't delete ingredent that are still in use."
+            render :show
+        end
 
     end
 
