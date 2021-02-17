@@ -9,16 +9,16 @@
 
 <div class="form">
 
-<%= form_for @recipe do |f| %>
+<%= form_with(model: recipe, local: true) do |form| %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
 
 <div id="ingredients">
 
     <h3>ingredients</h3>
 
-    <%= f.fields_for :ingredients, @recipe.ingredients.build do |t| %>
+    <%= form.fields_for :ingredients, recipe.ingredients do |t| %>
     <%= t.label :name %>
     <%= t.text_field :name, list: "ingredients_autocomplete" %>
         <datalist id="ingredients_autocomplete">
@@ -36,6 +36,6 @@
     <% end %>
 </div>
 
-<%= f.submit %>
+<%= form.submit %>
 <% end %>
 </div>

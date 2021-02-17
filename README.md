@@ -11,7 +11,7 @@
 ## Dev Stories
 (General to do list for PanPan and ColCol)
 
-* The form to create a recipe should generate a recipe, while also generating a new ingredient object and associates them in the join table. 
+DONE * The form to create a recipe should generate a recipe, while also generating a new ingredient object and associates them in the join table. 
 Pan should cook some chicken.
 
 
@@ -19,7 +19,7 @@ Pan should cook some chicken.
 
 1. When creating a recipe, a user should be able to “add” a field for ingredients in the user interface, in order to add multiple ingredients to the recipe. 
 
-2. When editing a recipe, the ingredient list should be persisted for that item, so the user does not have to re-select those ingredients. (This may be dependent on story 1)
+* DONE *. When editing a recipe, the ingredient list should be persisted for that item, so the user does not have to re-select those ingredients. (This may be dependent on story 1)
 
 3. When deleting user account, the user session should also be terminated. (Dependent destroy?)
 
