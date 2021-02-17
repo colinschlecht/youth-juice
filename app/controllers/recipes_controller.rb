@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
             redirect_to @recipe
         else
             @ingredients = Ingredient.all
-            # 1.times { @recipe.ingredients.build() }
+            1.times { @recipe.ingredients.build() }
             render :new
         end
     end
