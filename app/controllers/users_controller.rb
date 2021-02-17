@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     before_action :find_user, only: [:show, :edit, :update, :destroy]
+    skip_before_action :require_login, only: [:new, :destroy]
 
 
     def show
