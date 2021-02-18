@@ -22,6 +22,13 @@ $grid-breakpoints: (
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
+        .navbar-brand {
+                color:white;
+        }
+        .nav-link {
+                color:white;
+        }
+        
 // body
         .body {
                 width: 100%;
@@ -32,7 +39,7 @@ $grid-breakpoints: (
                 background-repeat: no-repeat;
                 background-attachment: scroll;
                 background-size: cover;
-                color: #000000;
+                
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
               }
         body{
@@ -67,18 +74,8 @@ $grid-breakpoints: (
                 font-size: 16px;
                 color: $white;
         }
-        a:visited {
-                color: $black;
-        }
-        .jumbotron {
-                background: #0048CD;
-                color: $white;
-                text-align: center;
-                p {
-                        color: $white;
-                        font-size: 26px;
-                }
-        }
+       
+  
         .link {
                 color: $white;
         }
