@@ -6,6 +6,13 @@
         </div>
 </div>
 
+<h3>Drinks featured: </h3>
+<ul>
+    <% @ingredient.recipes.each do |recipe| %>
+        <li><%= link_to recipe.name , recipe_path(recipe) %></li>
+    <% end %>
+</ul>
+
 
 <%= link_to "Edit Info", edit_ingredient_path(@ingredient), :class=> 'btn btn-secondary' %>
 <%= button_to "Delete", @ingredient, method: :delete, :class=> 'btn btn-secondary' %>
