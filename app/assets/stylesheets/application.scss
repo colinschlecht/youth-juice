@@ -8,7 +8,7 @@ $black: black;
 
 
 $grid-breakpoints: (
-        xs: 0,
+        xs: 10px,
         sm: 500px,
         md: 750px,
         lg: 800px,
@@ -154,17 +154,17 @@ $grid-breakpoints: (
 
 
         
-        // @media (min-width: 576px) {
-                //         .container-sm, .container {
-                        //           max-width: 540px;
-                        //         }
-                        //       }
-                        //       @media (min-width: 768px) {
-                                //         .container-md, .container-sm, .container {
-                                        //           max-width: 720px;
-                                        //         }
-                                        //       }
-                                        //       @media (min-width: 992px) {
+//         @media (min-width: 400px) {
+//                         .container-sm, .container {
+//                                   max-width: 540px;
+//                                 }
+//                               }
+//                               @media (min-width: 768px) {
+//                                         .container-md, .container-sm, .container {
+//                                                   max-width: 720px;
+//                                                 }
+//                                               }
+//                                               @media (min-width: 992px) {
 //         .container-lg, .container-md, .container-sm, .container {
 //           max-width: 960px;
 //         }
