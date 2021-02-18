@@ -35,13 +35,8 @@ class RecipesController < ApplicationController
             current_user.recipes << @recipe
             redirect_to @recipe
         else
-<<<<<<< HEAD
-            @ingredients = Ingredient.all
-            1.times { @recipe.ingredients.build() }
-=======
             # @ingredients = Ingredient.all
-            1.times { @recipe.ingredients.build }
->>>>>>> origin/pan_iss1
+            1.times { @recipe.ingredients.build() }
             render :new
         end
     end
