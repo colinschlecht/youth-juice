@@ -1,9 +1,8 @@
 <div class="card">
     <div class="card-body">
         <h2 class="card-title"><%= @user.username %></h2>
-        <h2>Bio: <%= @user.bio %></h2>
+        <h3>Bio: <%= @user.bio %></h3>
         <h2>Favorite Drink: <%= @user.favorite_drink %></h2>
-        <h3><%= @user.username %>'s libration creations:</h3>
         <% if @current_user === @user %>
             <%= link_to "Edit Info", edit_user_path(@user) %>
             <%= button_to "Delete", @user, method: :delete %>
