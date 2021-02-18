@@ -1,19 +1,26 @@
 
 <h1><%=@recipe.name %></h1>
+<% if @recipe.creator %>
+    <h2>created by: <%= link_to @recipe.creator.username, user_path(@recipe.creator) %></h2>
+<% end %>
 <div class="description">
 <h1><%=@recipe.description %><h1>
 </div>
 <ul>
 <% @recipe.ingredients.each do |i|%>
-    <li><%= i.name  %></li>
-    <div class="description">
-    <li><%= i.description %></li>
+    <li><%= i.name  %>
+    <ul>
+        <div class="description">
+        <li><%= i.description %></li>
+    </ul>
+    </li>
     </div>
 <% end %>
 </ul>
 
-
-<%= link_to "Edit Info", edit_recipe_path(@recipe), :class=> 'btn btn-secondary' %>
-<%= button_to "Delete", @recipe, method: :delete, :class=> 'btn btn-secondary' %>
+<button><%= link_to "Add to Collection", portfolios_path(@recipe) %></button>
+<button><%= link_to "Edit Info", edit_recipe_path(@recipe) %></button>
+<%= button_to "Delete", @recipe, method: :delete %>
+<% flash[:recipe] = @recipe %>
 
 

@@ -3,6 +3,8 @@ class Recipe < ApplicationRecord
     has_many :users, through: :portfolios
     has_many :recipe_ingredients, dependent: :destroy
     has_many :ingredients, through: :recipe_ingredients
+    validates :name, uniqueness: true
+    validates :ingredients, presence: true
     validates_associated :ingredients
 
     # accepts_nested_attributes_for :recipe_ingredients
@@ -15,6 +17,10 @@ class Recipe < ApplicationRecord
     #         recipe_ingredient = RecipeIngredient.find_or_create_by(recipe: self, ingredient: ingredient)
     #     end
     # end
+
+    def creator
+        self.users.first
+    end
 
    
 end

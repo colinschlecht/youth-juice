@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
     before_action :find_recipe, only: [:show, :edit, :update, :destroy]
     before_action :ingredient_type, only: [:show, :new, :create, :edit, :update, :destroy]
+    before_action :find_ingredients, only: [:new, :new, :create, :edit, :update]
 
     def index
         @recipes = Recipe.all
@@ -10,7 +11,7 @@ class RecipesController < ApplicationController
     end
 
     def edit
-        @ingredients = Ingredient.all
+        # @ingredients = Ingredient.all
     end
 
     def update
@@ -22,19 +23,25 @@ class RecipesController < ApplicationController
     end
 
     def new
-        @ingredients = Ingredient.all
+        # @ingredients = Ingredient.all
         @recipe = Recipe.new
         1.times { @recipe.ingredients.build }
     end
 
     def create
-        @ingredients = Ingredient.all
+        # @ingredients = Ingredient.all
         @recipe = Recipe.new(recipe_params)
         if @recipe.save
+            current_user.recipes << @recipe
             redirect_to @recipe
         else
+<<<<<<< HEAD
             @ingredients = Ingredient.all
             1.times { @recipe.ingredients.build() }
+=======
+            # @ingredients = Ingredient.all
+            1.times { @recipe.ingredients.build }
+>>>>>>> origin/pan_iss1
             render :new
         end
     end
@@ -51,6 +58,10 @@ class RecipesController < ApplicationController
 
     def find_recipe
         @recipe = Recipe.find(params[:id])
+    end
+
+    def find_ingredients
+        @ingredients = Ingredient.all
     end
     
     def ingredient_type
