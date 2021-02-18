@@ -3,6 +3,7 @@
 
 
 
+
 $white: white;
 $black: black;
 
@@ -18,12 +19,9 @@ $grid-breakpoints: (
 
 
 // Nav  
-
-
-     
         .navbar {   
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-               
+                
         }
 
         .navbar-brand {
@@ -38,10 +36,7 @@ $grid-breakpoints: (
 
         .navbar-toggler {
                 color: rgb(255, 255, 255);
-              } 
-           
-
-
+                } 
         
 // body
         .body {
@@ -85,10 +80,13 @@ $grid-breakpoints: (
                 margin: .7rem;
                 flex-shrink: 2;
         }
+
+// forms  
+        .form {
+                padding: 1em;
+        }
         
-
 // buttons
-
         .btn-primary {
                 color: $white;
                 margin-bottom: .6rem;
@@ -101,7 +99,7 @@ $grid-breakpoints: (
                 background-color: $white;
                 display: inline-block;
         }
-// 
+// other
         h1,
         h2 {
                 font-weight: bold;
@@ -131,7 +129,7 @@ $grid-breakpoints: (
         
 
 
-        // ------ footer -------
+ // ------ footer -------
         .footer {
                 padding: 5rem 0;
                 background: #000000;
@@ -146,7 +144,9 @@ $grid-breakpoints: (
 
 
 
-        
+//////////  The Bone Yard /////////
+
+
         // article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
         //         display: block;
         // }
