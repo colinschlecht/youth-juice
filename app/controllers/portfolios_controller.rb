@@ -23,7 +23,8 @@ class PortfoliosController < ApplicationController
         if @portfolio.save
             redirect_to portfolios_path
         else
-            render :new
+            flash[:notice] = "You already have bookmarked this drink."
+            redirect_to recipe_path(@portfolio[:recipe_id])
         end
     end
 

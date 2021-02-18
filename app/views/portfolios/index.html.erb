@@ -1,13 +1,22 @@
-<h2><%= @current_user.username %>'s libration creation</h2>
-<ul>
-    <% @a2.each do |recipe| %>
-        <li><%= recipe.name %></li>
-    <% end %>
-</ul>
-<h2><%= @current_user.username %>'s favorites</h2>
-<ul>
-    <% @a3.each do |recipe| %>
-        <li><%= recipe.name %></li>
-    <% end %>
-</ul>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+        <h2><%= @current_user.username %>'s libration creation</h2>
+        <ul>
+        <% @a2.each do |recipe| %>
+            <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+        <% end %>
+        </ul>
+    </div>
+    <div class="col-4">
+        <h2><%= @current_user.username %>'s favorites</h2>
+        <ul>
+            <% @a3.each do |recipe| %>
+                <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+            <% end %>
+        </ul>
+    </div>
+  </div>
+</div>
