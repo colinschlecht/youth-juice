@@ -5,4 +5,9 @@ class PortfoliosController < ApplicationController
     #     @recipes = @user.recipes
     # end
 
+    def create
+        @recipe = 
+        current_user.recipes << @recipe
+        redirect_to recipe_path(flash[:recipe])
+    end
 end

@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_many :portfolios
-    has_many :recipes, through: :portfolios
+    has_many :portfolios, dependent: :destroy
+    has_many :recipes, through: :portfolios, dependent: :destroy
 
     validates :username, presence: true
     validates :password, presence: true

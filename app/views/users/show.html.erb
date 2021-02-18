@@ -6,5 +6,7 @@
         <li><%= link_to recipe.name, recipe_path(recipe) %></li>
     <% end %>
 </ul>
-<%= link_to "Edit Info", edit_user_path(@user) %>
-<%= button_to "Delete", @user, method: :delete %>
+<% if @current_user === @user %>
+    <%= link_to "Edit Info", edit_user_path(@user) %>
+    <%= button_to "Delete", @user, method: :delete %>
+<% end %>
