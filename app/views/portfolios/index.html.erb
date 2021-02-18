@@ -1,6 +1,12 @@
 <h2><%= @current_user.username %>'s libration creation</h2>
 <ul>
-    <% @current_user.recipes.each do |recipe| %>
+    <% @a2.each do |recipe| %>
+        <li><%= recipe.name %></li>
+    <% end %>
+</ul>
+<h2><%= @current_user.username %>'s favorites</h2>
+<ul>
+    <% @a3.each do |recipe| %>
         <li><%= recipe.name %></li>
     <% end %>
 </ul>
