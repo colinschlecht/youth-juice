@@ -8,39 +8,82 @@ $black: black;
 
 
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
+        xs: 10px,
+        sm: 500px,
+        md: 750px,
+        lg: 800px,
         xl: 1200px,
         xxl: 1400px
         );
 
 
-// Nav       
+// Nav  
+
+
+     
         .navbar {   
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+               
         }
 
+        .navbar-brand {
+                color:white;
+                font-weight: bold;
+        }
+        .nav-link {
+                color:white;
+                font-weight: bold;
+                
+        }
+
+        .navbar-toggler {
+                color: rgb(255, 255, 255);
+              } 
+           
+
+
+        
 // body
         .body {
-                width: 100%;
-                height: auto;
+               
+                min-width:15rem;
                 min-height: 27rem;
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("pour.jpg");         
+                background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0.1)), url("pour.jpg");         
                 background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: scroll;
                 background-size: cover;
-                color: #000000;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                overflow: auto;
               }
         body{
-                background-color: rgb(41, 35, 28);
+                background-color: rgb(41, 35, 28) 
         }
 
         .container-title {
-                align-content: center ;
+                min-height: 10em;
+                padding: 1em;
+                justify-content: space-around; 
+                display: flex;
+                
+                flex-shrink: 2;
+        }
+
+        .text {
+                position: absolute;
+                
+                color:white;
+                min-width: 15rem;
+                flex-shrink: 2;
+                
+              }
+
+        #container {
+                padding: 1em;
+                justify-content: space-around; 
+                display: flex;
+                margin: .7rem;
+                flex-shrink: 2;
         }
         
 
@@ -48,11 +91,11 @@ $grid-breakpoints: (
 
         .btn-primary {
                 color: $white;
-                margin-bottom: 5px;
+                margin-bottom: .6rem;
         }
         .btn-secondary {
                 color: $white;
-                margin-bottom: 5px;
+                margin-bottom: .6rem;
         }
         .btn-sm {
                 background-color: $white;
@@ -64,21 +107,11 @@ $grid-breakpoints: (
                 font-weight: bold;
         }
         p {
-                font-size: 16px;
+                font-size: 1rem;
                 color: $white;
         }
-        a:visited {
-                color: $black;
-        }
-        .jumbotron {
-                background: #0048CD;
-                color: $white;
-                text-align: center;
-                p {
-                        color: $white;
-                        font-size: 26px;
-                }
-        }
+       
+  
         .link {
                 color: $white;
         }
@@ -102,7 +135,7 @@ $grid-breakpoints: (
         .footer {
                 padding: 5rem 0;
                 background: #000000;
-                position: absolute;
+                position: fixed;
                 bottom:0;
                 left:0;
                 width:100%;
@@ -121,17 +154,17 @@ $grid-breakpoints: (
 
 
         
-        // @media (min-width: 576px) {
-                //         .container-sm, .container {
-                        //           max-width: 540px;
-                        //         }
-                        //       }
-                        //       @media (min-width: 768px) {
-                                //         .container-md, .container-sm, .container {
-                                        //           max-width: 720px;
-                                        //         }
-                                        //       }
-                                        //       @media (min-width: 992px) {
+//         @media (min-width: 400px) {
+//                         .container-sm, .container {
+//                                   max-width: 540px;
+//                                 }
+//                               }
+//                               @media (min-width: 768px) {
+//                                         .container-md, .container-sm, .container {
+//                                                   max-width: 720px;
+//                                                 }
+//                                               }
+//                                               @media (min-width: 992px) {
 //         .container-lg, .container-md, .container-sm, .container {
 //           max-width: 960px;
 //         }
