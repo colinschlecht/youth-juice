@@ -5,6 +5,10 @@ class SessionsController < ApplicationController
         render :home
     end
 
+    def age
+        render layout: false
+    end
+
     def new
     end
 

@@ -39,4 +39,8 @@ class ApplicationController < ActionController::Base
     def log_in_user(user_id)
         session[:user_id] = user_id
     end
+
+    def user_age
+        session[:legal] = true
+    end
 end

@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new', as: 'login'
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#logout', as: 'logout'
-  root 'sessions#home'
+  root 'sessions#age'
+  get '/home', to: 'sessions#home'
 
 
   resources :portfolios

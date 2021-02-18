@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouthJuice</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%= stylesheet_link_tag 'sessions', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+  <body class='body'>
+    <div class="welcome">
+      <h1>Are you over 21?</h1>
+      <%= link_to "Yes", home_path, :class=> 'btn btn-secondary', :id=> 'age-thing'%>
+      <%= link_to "No", "https://geekprank.com/fbi-warning/",  :class=> 'btn btn-secondary' , :id=> 'age-thing'%>
+    </div>
+  </body>
+
+</html>
