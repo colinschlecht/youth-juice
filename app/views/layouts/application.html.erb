@@ -82,11 +82,11 @@
     </nav>
     </div>
   </div>
-  <div>
-    <% if flash[:notice] %>
+  <% if flash[:notice] %>
+    <div class="alert alert-dark" role="alert">
       <%= flash[:notice] %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
     <!------ Body -------->
     <%= yield %>
     <!-- Footer-->
