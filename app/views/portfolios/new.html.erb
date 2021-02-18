@@ -1,0 +1,5 @@
+<%= form_for @portfolio do |f| %>
+    <%= f.label :recipe %>
+    <%= f.collection_select :recipe_id, @recipes, :id, :name %>
+    <%= f.submit value="Add to your profile"%>
+<% end %>

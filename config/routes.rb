@@ -3,12 +3,15 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#logout', as: 'logout'
   root 'sessions#home'
-  post '/portfolios', to: 'portfolios#add_portfolio', as: 'add_portfolio'
+
 
   resources :portfolios
   resources :ingredients
   resources :recipe_ingredients
   resources :recipes
+  resources :recipes do
+    resources :portfolios, shallow: true
+  end
   resources :users
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

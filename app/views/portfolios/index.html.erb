@@ -1,0 +1,7 @@
+<h2><%= @current_user.username %>'s libration creation</h2>
+<ul>
+    <% @current_user.recipes.each do |recipe| %>
+        <li><%= recipe.name %></li>
+    <% end %>
+</ul>
+
