@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#logout', as: 'logout'
   root 'sessions#home'
+  post '/portfolios', to: 'portfolios#add_portfolio', as: 'add_portfolio'
 
   resources :portfolios
   resources :ingredients

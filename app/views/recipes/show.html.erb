@@ -18,7 +18,7 @@
 <% end %>
 </ul>
 
-<button><%= link_to "Add to Collection", portfolios_path(@recipe) %></button>
+<button><%= link_to "Add to Collection", add_portfolio_path %></button>
 <button><%= link_to "Edit Info", edit_recipe_path(@recipe) %></button>
 <%= button_to "Delete", @recipe, method: :delete %>
 <% flash[:recipe] = @recipe %>
