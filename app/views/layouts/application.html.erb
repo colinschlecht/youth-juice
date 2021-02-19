@@ -25,14 +25,11 @@
 
 
       <% if session[:user_id] %>
-            <!-- home/account  -->
+            <!-- home  -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-sm-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="<%= root_path %>">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<%= user_path(session[:user_id]) %>">My Account</a>
+            <a class="nav-link" aria-current="page" href="<%= home_path %>">Home</a>
           </li>
             <!-- recipe drop down  -->
           <li class="nav-item dropdown">
@@ -41,7 +38,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="<%= new_recipe_path %>">Mix a Drink</a></li>
-              <li><a class="dropdown-item" href="<%= portfolios_path %>">Your Recipes</a></li>
+              <li><a class="dropdown-item" href="<%= portfolios_path %>">My Recipes</a></li>
               <li><a class="dropdown-item" href="<%= recipes_path %>">All Recipes</a></li>
             </ul>
           </li>
@@ -55,6 +52,10 @@
               <li><a class="dropdown-item" href="<%= new_ingredient_path %>">Add Ingredient</a></li>
             </ul>
           </li>
+            <!-- Account -->
+          <li class="nav-item">
+            <a class="nav-link" href="<%= user_path(session[:user_id]) %>">My Account</a>
+          </li>
             <!-- log out  -->
 
           <li class="nav-item">
@@ -66,7 +67,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-xs-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="<%= root_path %>">Home</a>
+            <a class="nav-link" aria-current="page" href="<%= home_path %>">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<%= login_path %>">Log In</a>
@@ -81,15 +82,17 @@
     </nav>
     </div>
   </div>
-    <!------ Main Body -------->
-  
-
+  <% if flash[:notice] %>
+    <div class="alert alert-dark" role="alert">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+    <!------ Body -------->
     <%= yield %>
     <!-- Footer-->
-   
 
         <footer class="footer">
-          <h6 class="footer-text">Colin Schlecht and Kai Peng Li, 2021</h6>
+          <!----<h6 class="footer-text">Colin Schlecht and Kai Peng Li, 2021</h6>--->
         </footer>
 
         <!-- Bootstrap core JS

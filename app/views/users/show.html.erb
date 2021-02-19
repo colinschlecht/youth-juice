@@ -7,7 +7,9 @@
         <li><%= link_to recipe.name, recipe_path(recipe) %></li>
     <% end %>
 </ul>
+<div class="button-area">
 <% if @current_user === @user %>
     <%= link_to "Edit Info", edit_user_path(@user), :class=> 'btn btn-secondary' %>
     <%= button_to "Delete", @user, method: :delete, :class=> 'btn btn-secondary' %>
 <% end %>
+</div>

@@ -1,13 +1,15 @@
-    <% if recipe.errors.any? %>
+<% if recipe.errors.any? %>
+    <div class="alert alert-dark" role="alert">
         <ul>
             <% recipe.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
             <% end %>
         </ul>
-    <% end %>
+    </div>
+<% end %>
 
 
-<div class="form">
+<div id="recipe-container">
 
 </div>
 <%= form_with(model: recipe, local: true) do |form| %>

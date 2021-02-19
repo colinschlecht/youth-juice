@@ -21,6 +21,19 @@ $grid-breakpoints: (
         xxl: 1400px
         );
 
+        .welcome{
+                border-radius: 25px;
+                background-color: rgba(204, 204, 204, 0.801);
+                margin: 100px;
+                padding: 40px;
+                text-align: center;
+                height: 300px;
+            }
+            
+            #age-thing{
+                margin: 25px;
+                width: 90px;
+            }
 
 // Nav  
         .navbar {   
@@ -31,6 +44,11 @@ $grid-breakpoints: (
         .navbar-brand {
                 color:white;
                 font-weight: bold;
+                padding-bottom: 15px;
+        }
+        .navbar-brand:hover {
+                font-weight: bold;
+                color:rgb(79, 79, 79);
         }
         .navbar-brand:hover {
                 font-weight: bold;
@@ -53,14 +71,17 @@ $grid-breakpoints: (
         .navbar-toggler:hover {
                 color: black;
                 } 
+
+        // .nav-item {
+                
+        // }
         
 // body
 
 
         .body {
                 margin: auto;
-                width:100%;
-                min-height: 27rem;
+                max-height: 10rem;
                 background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0.1)), url("pour.jpg");         
                 background-position: center;
                 background-repeat: no-repeat;
@@ -77,28 +98,166 @@ $grid-breakpoints: (
         }
         
 
-        .container-title {
-                min-height: 10em;
-                padding: 1em;
-                justify-content: space-around; 
-                display: flex;
-                flex-shrink: 2;
-        }
-
+        
         .text {
                 position: absolute;     
                 color:white;
                 min-width: 15rem;
                 flex-shrink: 2;
                 
-              }
-
-        #container {
-                padding: 1em;
-                justify-content: space-around; 
+        }
+        
+        
+        // ------ footer -------
+        .footer {
+                height:10em;
+                margin-top: 0;
+                background: #000000;
+                position: fixed;
+                padding-bottom: 3rem;
+                bottom:0;
+                left:0;
+                width:100%;
+                color: white;
+                font-family: "Open Sans", sans-serif;
+                font-size: 0.5em;
+                text-align:center; 
+                align-content: space-between; 
+                z-index: -100;
+        }
+        
+        .footer-text{
+                color: white;
+                font-family: "Open Sans", sans-serif;
+                font-size: 0.5em;
+        }
+        //home
+        .home-container{
                 display: flex;
-                margin: .7rem;
-                flex-shrink: 2;
+                align-items: center;
+                flex-Direction: Column;
+                align-content: space-between;                
+                justify-content: space-between;                
+                flex-basis: 0;
+                flex-shrink: 1;
+                flex-grow: 1;
+        }
+
+        #button-main{
+                position: relative;
+                max-height: 2rem;
+                margin: 3rem;
+                justify-content: center;
+                align-items: center;
+                display:flex;
+                
+                flex-shrink: 1;
+                flex-grow: 1;
+                flex-Direction: Column;
+        }
+        .main-tagline{
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                color:rgba(255, 255, 255, 0.5);
+                
+                flex-shrink: 1;
+                flex-grow: 1;
+                flex-Direction: column;
+        }
+        #main-title {
+                position: relative;
+                margin:4rem;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+                flex-shrink: 1;
+                flex-grow: 1;
+                flex-Direction: Column;
+        }
+        
+        // recipe
+        #recipe-container {
+                list-style-type: none;
+                color:white;
+                background-color:rgba(0, 0, 0, 0.75);
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                min-height: 10em;
+                margin: 3rem;
+                min-width: 15em;
+                padding: 1em;
+                padding: 2px 16px;
+                flex-basis: 0;
+                flex-shrink: 1;
+                align-content: space-between;
+                word-wrap:break-word;
+                overflow: auto;      
+        }
+
+        
+        #recipe-container:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+        }
+        .recipe-name {
+                flex-basis: 0;
+                flex-shrink: 1;
+                flex-grow: 1;
+                min-width: 6em;
+        }
+        .creator {
+                font-size: .5rem;
+                color:white;
+        }
+
+        .description {
+                list-style-type: none;
+                padding: 0px;
+                flex-basis: 0;
+                flex-shrink: 1;
+                flex-grow: 1;
+                font-size: 1rem;
+                color:rgb(208, 205, 202)
+        }
+        .sub-heading{
+                font-size: 1rem;
+        }
+
+        .ingredients-ul {
+                padding: 0;
+                list-style-type: none;
+        }
+
+        .ingredient-name{
+                list-style-type: none;
+                flex-basis: 0;
+                flex-shrink: 1;
+                flex-grow: 1;
+                font-size: 1.5rem;
+        }
+
+        #button {
+                display: flex;
+                color: $white;
+                margin: 1rem;
+                
+                flex-shrink: 1;
+                flex-grow: 1;
+                max-width: 10rem;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                align-content: center;
+                justify-content: center;
+                
+        }
+        
+        .button-area {
+                width: 100%;
+                display: flex;
+                flex-Wrap: Wrap;
+                justify-content: space-around;
+                
         }
 // ------ footer -------
          .footer {
@@ -172,45 +331,61 @@ $grid-breakpoints: (
                 font-size: 1rem;
         }
 
-        .ingredients-ul {
-                padding: 0;
-                list-style-type: none;
-        }
-
-        .ingredient-name{
-                list-style-type: none;
-                flex-basis: 0;
-                flex-shrink: 1;
-                flex-grow: 1;
-                font-size: 1.5rem;
-        }
-
-        #button {
-                display: flex;
-                color: $white;
-                margin: 1rem;
-                flex-basis: 0;
-                flex-shrink: 1;
-                flex-grow: 1;
-                max-width: 10rem;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                align-content: center;
-                justify-content: center;
-        }
-        
-        .button-area {
-                width: 100%;
-                display: flex;
-                align-content: space-between;
-                flex-Wrap: Wrap;
-                justify-content: space-around;
-                margin-bottom: 5rem;
-        }
        
 // forms  
         .form {
+                list-style-type: none;
+                color:white;
+                background-color:rgba(0, 0, 0, 0.75);
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                min-height: 10em;
+                margin: 3rem;
+                // min-width: 15em;
                 padding: 1em;
+                flex-basis: 0;
+                flex-shrink: 1;
+                align-content: space-between;
+                word-wrap:break-word;
+                overflow: auto;   
+                flex-Direction: Column;
+                align-items: center;
+                flex-Direction: column;
+                align-content: center;                
+                justify-content: center; 
+                
         }
+        .login-f {
+                display:flex;
+                list-style-type: none;
+                color:white;
+                background-color:rgba(0, 0, 0, 0.75);
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                min-height: 10em;
+                margin: auto;
+                max-width: 15em;
+                padding: 1em;
+                flex-basis: 0;
+                flex-shrink: 1;
+                word-wrap:break-word;
+                overflow: auto;   
+                justify-content: space-around;
+                
+        }
+       
+        .newtagline{
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                color:rgb(86, 83, 83);
+                flex-shrink: 1;
+                flex-grow: 1;
+                flex-Direction: column;
+        }
+
+       
         
 // buttons
         .btn-primary {
@@ -227,7 +402,8 @@ $grid-breakpoints: (
                 flex-grow: 1;
                 max-width: 10rem;
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                
+                align-content: center;
+                justify-content: center;
         }
         .btn-secondary:hover {
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
@@ -236,6 +412,15 @@ $grid-breakpoints: (
         .btn-sm {
                 background-color: $white;
                 display: inline-block;
+        }
+
+        #newuserbuttonarea {
+                display:flex;
+                margin: auto;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                
         }
 
 

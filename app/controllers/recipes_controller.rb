@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
     end
 
     def show
+        current_user
     end
 
     def edit

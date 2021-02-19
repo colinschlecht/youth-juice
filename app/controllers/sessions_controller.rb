@@ -5,12 +5,17 @@ class SessionsController < ApplicationController
         render :home
     end
 
+    def age
+        render layout: false
+    end
+
     def new
     end
 
     def create
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
+            flash[:notice] = "Log in succesully."
             session[:user_id] = user.id
             redirect_to user_path(user)
         else

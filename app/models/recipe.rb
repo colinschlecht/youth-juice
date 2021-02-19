@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-    has_many :portfolios
+    has_many :portfolios, dependent: :destroy
     has_many :users, through: :portfolios
     has_many :recipe_ingredients, dependent: :destroy
     has_many :ingredients, through: :recipe_ingredients
@@ -18,8 +18,14 @@ class Recipe < ApplicationRecord
     #     end
     # end
 
+    #return the first portfolio object
+    def first_create
+        self.portfolios.order(:created_at).first
+    end
+
+    #return the creator of the recipe
     def creator
-        self.users.first
+        User.find(first_create.user_id)
     end
 
    
