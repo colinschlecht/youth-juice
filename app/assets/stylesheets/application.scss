@@ -109,6 +109,11 @@ $grid-breakpoints: (
         
         
         // ------ footer -------
+
+        .recipe-create-container{
+
+        }
+
         .footer {
                 height:10em;
                 margin-top: 0;
@@ -435,8 +440,11 @@ $grid-breakpoints: (
         }
         
         
-        .link {
+        a{
                 color: $white;
+        }
+        a:hover{
+                color:rgb(222, 149, 85);
         }
         
         img,
