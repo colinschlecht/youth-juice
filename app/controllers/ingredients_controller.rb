@@ -25,11 +25,15 @@ class IngredientsController < ApplicationController
     end
 
     def edit
-
     end
-
+    
     def update
-
+        if @ingredient.update(ingredient_params)
+            flash[:notice] = "Ingredient Infos have updated!"
+            redirect_to @ingredient
+        else
+            render :new
+        end
     end 
 
     def destroy

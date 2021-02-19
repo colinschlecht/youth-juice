@@ -1,0 +1,12 @@
+    <%= form.fields_for :ingredients, recipe.ingredients do |tt|%>
+
+ <h5>Unlisted Ingredient</h5>
+ 
+        <%= tt.label :name %><br>
+        <%= tt.text_field :name %><br>
+        <%= tt.label :ingredient_type %><br>
+        <%= tt.select :ingredient_type, @ingredient_type %><br>
+        <%= tt.label :description %><br>
+        <%= tt.text_area :description %><br>
+         
+    <% end %>
