@@ -1,15 +1,18 @@
-<h2><%= @user.username %></h2>
-<h2>Bio: <%= @user.bio %></h2>
-<h2>Favorite Drink: <%= @user.favorite_drink %></h2>
-<h3><%= @user.username %>'s libration creations:</h3>
-<ul>
-    <% @user.recipes.each do |recipe| %>
-        <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+<div id="recipe-container">
+<br>
+<h2><%= @user.username %></h2><br>
+<h3>Bio: <%= @user.bio %></h3><br>
+<h3>Favorite Drink: <%= @user.favorite_drink %></h3>
+<h4><%= @user.username %>'s libration creations:</h4>
+    <ul class="ingredients-ul">
+        <% @user.recipes.each do |recipe| %>
+            <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+        <% end %>
+    </ul>
+    <div class="button-area">
+    <% if @current_user === @user %>
+        <%= link_to "Edit Info", edit_user_path(@user), :class=> 'btn btn-secondary' %>
+        <%= button_to "Delete", @user, method: :delete, :class=> 'btn btn-secondary' %>
     <% end %>
-</ul>
-<div class="button-area">
-<% if @current_user === @user %>
-    <%= link_to "Edit Info", edit_user_path(@user), :class=> 'btn btn-secondary' %>
-    <%= button_to "Delete", @user, method: :delete, :class=> 'btn btn-secondary' %>
-<% end %>
+    </div>
 </div>
