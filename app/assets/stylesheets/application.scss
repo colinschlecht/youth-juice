@@ -179,7 +179,7 @@ $grid-breakpoints: (
                 font-size: 1rem;
         }
         #recipe-container {
-                border-radius: 10px;
+                border-radius: .4rem; 
                 list-style-type: none;
                 color:white;
                 background-color:rgba(0, 0, 0, 0.75);
@@ -196,12 +196,26 @@ $grid-breakpoints: (
                 word-wrap:break-word;
                 overflow: auto;      
         }
+        #test {
+                margin-right: 3rem;
+                margin-left: 3rem;
+                background-color:rgba(0, 0, 0, 0.1);
+                border-radius: .4rem; 
+
+        }
         #rec-con-title{
                 padding: 20px;
                 margin: 0;
                 text-align: center;
         }
-
+        #rec-con-title2{
+                color:white;
+                text-align: center;
+                margin-block-end: auto ;
+               
+                
+        }
+        
         #recipe-container-small-card {
                 border-radius: .4rem; 
                 padding: 1em;
@@ -218,7 +232,7 @@ $grid-breakpoints: (
                 flex-grow: 2;
                 margin:1rem;  
         }
-
+        
         #recipe-container-small-card:hover {
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
         }
@@ -232,7 +246,8 @@ $grid-breakpoints: (
                 flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
-                align-content: center;      
+                align-content: center;    
+                  
         }
         .ingredients-ul {
                 padding: 0;
