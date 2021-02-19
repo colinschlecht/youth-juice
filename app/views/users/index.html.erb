@@ -1,0 +1,9 @@
+<div id="recipe-container">
+    <br>
+    <h2>List of Mixologist</h2><br>
+    <ul  class="ingredients-ul">
+    <% @users.each do |user| %>
+        <li><%= link_to user.username, user_path(user) %></li>
+    <% end %>
+    </ul>
+</div>

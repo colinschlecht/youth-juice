@@ -2,7 +2,9 @@ class UsersController < ApplicationController
     before_action :find_user, only: [:show, :edit, :update, :destroy]
     skip_before_action :require_login, only: [:new, :destroy, :create]
 
-
+    def index
+        @users = User.all
+    end
     def show
         current_user
         @recipes = @user.recipes.all

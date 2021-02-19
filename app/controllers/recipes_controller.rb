@@ -16,6 +16,7 @@ class RecipesController < ApplicationController
 
     def update
         if @recipe.update(recipe_params)
+            flash[:notice] = 'Recipe was updated.'
             redirect_to @recipe
         else 
             render :edit  
