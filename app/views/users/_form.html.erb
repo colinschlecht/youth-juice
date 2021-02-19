@@ -5,19 +5,19 @@
         <% end %>
     </div>
 <% end %>
-<div class="form">
+<div class="login-f">
     <%= form_for @user do |f| %>
-        <%= f.label :username %>
+        <%= f.label :username %><br>
         <%= f.text_field :username %><br>
-        <%= f.label :password %>
+        <%= f.label :password %><br>
         <%= f.password_field :password %><br>
-        <%= f.label :password_confirmation %>
+        <%= f.label :password_confirmation %><br>
         <%= f.password_field :password_confirmation %><br>
         <br>
         <i>Optional</i> <br>
-        <%= f.label :favorite_drink %>
+        <%= f.label :favorite_drink %><br>
         <%= f.text_field :favorite_drink%><br>
-        <%= f.label :bio %>
+        <%= f.label :bio %><br>
         <%= f.text_area :bio %><br>
         <%= f.submit :class=> 'btn btn-secondary'  %>
     <% end %>
