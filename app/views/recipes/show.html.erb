@@ -1,26 +1,31 @@
+<div id="recipe-container">
 
-<h1><%=@recipe.name %></h1>
+<h1 class="recipe-name"><%=@recipe.name %></h1>
+
 <% if @recipe.creator %>
-    <h2>created by: <%= link_to @recipe.creator.username, user_path(@recipe.creator) %></h2>
+    <h2 class="creator">created by: <%= link_to @recipe.creator.username, user_path(@recipe.creator) %></h2>
 <% end %>
-<div class="description">
-<h1><%=@recipe.description %><h1>
-</div>
-<ul>
+
+<h2 class="description"><%=@recipe.description %></h2>
+
+<ul class="ingredients-ul">
+<h3 class="sub-heading">Ingredients:</h3>
 <% @recipe.ingredients.each do |i|%>
-    <li><%= i.name  %>
-    <ul>
-        <div class="description">
-        <li><%= i.description %></li>
+    <li class="ingredient-name"><%= i.name %> </li>
+    <li class="description"><%= i.description %></li>
     </ul>
     </li>
-    </div>
+    
+
 <% end %>
 </ul>
+</div>
 
-<%= link_to "Add to Collection", new_recipe_portfolio_path(@recipe), :class=> 'btn btn-secondary' %>
-<%= link_to "Edit Info", edit_recipe_path(@recipe), :class=> 'btn btn-secondary' %>
-<%= button_to "Delete", @recipe, method: :delete, :class=> 'btn btn-secondary'%>
+<div class="button-area">
+<%= link_to "Add to Collection", new_recipe_portfolio_path(@recipe), :class=> 'btn btn-secondary', :id=>"button" %>
+<%= link_to "Edit Info", edit_recipe_path(@recipe), :class=> 'btn btn-secondary', :id=>"button"%>
+<%= button_to "Delete", @recipe, method: :delete, :class=> 'btn btn-secondary', :id=>"button"%>
 <% flash[:recipe] = @recipe %>
+</div>
 
 
