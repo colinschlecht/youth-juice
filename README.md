@@ -1,13 +1,18 @@
 # Youth Juice 
-**DOMAIN GOES HERE**
 A web based platform built on Ruby on Rails for inspired and/or experiencd mixologists.
 
 ## Description
-Youth Juice is an online platform for those like-minded drinkers to catalog, store as well as share their passion in mixology. Users will be able to create their personal account in term to start keeping track of their drink recipes in the database. Ingredients stored in the database are gladly provided to streamline the recipe creating process. If ingredient in mind is not in the database yet, the user is able to add the particular ingredient while they're crafting the recipe in an attached form or simple head to the ingredient page to do so. Users are able to bookmark recipe from other users' creation, stored at a dedicated personal recipe page. Encrypted authentication is equipted so only the creator of the recipe is authorized to alter or remove the recipe from database.
+Youth Juice is an online platform for like-minded drinkers to catalog, store and share their passion for mixology. Users will be able to store their drink recipes and individual ingredients in the database. When creating a drink, ingredients stored in the database are provided to streamline the recipe creating process, however users can still add an ingredient during recipe creation by simultaneously creating an ingredient. Users are able to bookmark recipes from other users. Encrypted authentication is built in so only the creator of the recipe is authorized to alter or remove the recipe from database, even if added to their list of drinks.
 
 ## Install
-To join the Youth Juice online family, we recommend visiting our domain above. If you want to host a local server in your local machine, ensure PostgreSQL server is running.
+** DOMAIN to come **
+
+At this time Youth Juice is local only. This readme will be updated once hosted. 
+
+If you want to host a local server in your local machine, ensure PostgreSQL server is running.
 https://www.postgresql.org/
+
+Fork and clone this repo to your local machine and run bundle install. Once completed, initialize the database. From there, start the server and visit the designated local host to enjoy!
 
 ## Clone the repository
 ```shell
@@ -39,18 +44,15 @@ Kai Peng Li GitHub: https://github.com/oopanpan
 
 ## Car
 
-A user should be able to create a friends list.
+1. Hosting.
 
-2. Drink boards
+2. A user should be able to create a friends list.
+
+3. Drink boards
 
 	* A user should be able to view all user activity as a timeline.
 
 	* A user should be able to view all friend activity.
 
-3. A user should be able to add other user’s drinks from their portfolio to their portfolio.
-(Think of having a share button on a drink).
-
-portfolio -- index = drink board?
-portfolio -- show page = individual page - either show yours or another user.
-user -- show page = that user's "view your profile?" Maybe?
+4. Improvements to share buttons and general site interface.
 
