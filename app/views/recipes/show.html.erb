@@ -26,7 +26,7 @@
 <% if @current_user === @recipe.creator %>
 <%= link_to "Edit Info", edit_recipe_path(@recipe), :class=> 'btn btn-secondary', :id=>"button"%>
 <%= button_to "Delete", @recipe, method: :delete, :class=> 'btn btn-secondary', :id=>"button"%>
-<% flash[:recipe] = @recipe %>
+<% end %>
 </div>
 
 
