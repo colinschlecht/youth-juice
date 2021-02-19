@@ -1,21 +1,22 @@
 <div>
-<h2>Log In</h2>
+<h2 id="main-title">Log In</h2>
     <div class="error_messge">
 
     <%= flash[:notice] %>
     
     </div>
-    <div class="form">
+    <div class="login-f">
         <%= form_tag(sessions_path) do %>
-            <%= label_tag "User Name" %>
-            <%= text_field_tag :username %><br>
-            <%= label_tag "Password" %>
+            <%= label_tag "User Name"%> <br>
+            <%= text_field_tag :username%><br>
+            <%= label_tag "Password"%><br>
             <%= password_field_tag :password %><br>
-            <%= submit_tag "Log In", :class=> 'btn btn-secondary' %>
+            <%= submit_tag "Log In" %>
         <% end %>
     </div>
 
-    <h4>New to Youth Juice?</h4>
-
-<%= link_to "Click Here to Sign Up", new_user_path, :class=> 'btn btn-secondary' %>
+    <h4 class="newtagline">New to Youth Juice?</h4>
+<div class="button-area">
+<%= link_to "Click Here to Sign Up", new_user_path, :class=> 'btn btn-secondary'  %>
+</div>
 </div>
