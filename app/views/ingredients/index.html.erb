@@ -1,10 +1,14 @@
-<h1> All Ingredients </h1>
-<ul>
-    <div class="list_all"> 
+<div id="recipe-container">
+<h1 class="recipe-name"> All Ingredients </h1>
+<ul class="ingredients-ul">
+    <div> 
         <% @ingredients.each do |i| %>
         <li><%= link_to i.name, ingredient_path(i) %></li>
         <% end %>
     </div>
 </ul>
+</div>
 
+<div class="button-area">
 <%= link_to "Create an Ingredient", new_ingredient_path, :class=> 'btn btn-secondary' %>
+</div>

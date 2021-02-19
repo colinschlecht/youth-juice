@@ -1,18 +1,17 @@
-<div class=ingredient>
-    <h2><%= @ingredient.name %></h2>
-    <h3><%= @ingredient.ingredient_type %></h3>
-        <div class="description">
-            <p><%= @ingredient.description %></p>
-        </div>
-</div>
+<div id="recipe-container">
+    <h2 class="recipe-name"><%= @ingredient.name %></h2>
+    <h3 class="description"><%= @ingredient.ingredient_type %></h3>
+    <p class="desciption"><%= @ingredient.description %></p><br>
 
 <h3>Drinks featured: </h3>
-<ul>
+<ul class="ingredients-ul">
     <% @ingredient.recipes.each do |recipe| %>
         <li><%= link_to recipe.name , recipe_path(recipe) %></li>
     <% end %>
 </ul>
+</div>
 
-
-<%= link_to "Edit Info", edit_ingredient_path(@ingredient), :class=> 'btn btn-secondary' %>
-<%= button_to "Delete", @ingredient, method: :delete, :class=> 'btn btn-secondary' %>
+<div class="button-area">
+    <%= link_to "Edit Info", edit_ingredient_path(@ingredient), :class=> 'btn btn-secondary' %>
+    <%= button_to "Delete", @ingredient, method: :delete, :class=> 'btn btn-secondary' %>
+</div>

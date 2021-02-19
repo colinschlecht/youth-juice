@@ -1,19 +1,21 @@
-   <% if @ingredient.errors.any? %>
+<% if @ingredient.errors.any? %>
+    <div class="alert alert-dark" role="alert">
         <ul>
             <% @ingredient.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
             <% end %>
         </ul>
-    <% end %>
+    </div>
+<% end %>
 
-<div class="form">
-    <%= form_for @ingredient do |f| %>
+<div id="recipe-container">
+    <%= form_for @ingredient do |f|%>
         <%= f.label "Name" %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, :class=>"form-control"%><br>
         <%= f.label "Type" %>
-        <%= f.select :ingredient_type, @ingredient_type %>
+        <%= f.select :ingredient_type, @ingredient_type, :class=>"form-control" %><br><br>
         <%= f.label "Description" %>
-        <%= f.text_area :description %>
+        <%= f.text_area :description, :class=>"form-control", :id=>"exampleFormControlTextarea1"%>
         <%= f.submit :class=> 'btn btn-secondary' %>
         <% end %>
 </div>
