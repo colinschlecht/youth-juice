@@ -26,12 +26,12 @@ class SessionsController < ApplicationController
 
     def logout
         session.delete :user_id
-        redirect_to root_path
+        redirect_to home_path
     end
 
     def destroy
         session.delete :user_id
         @current_user = nil
-        redirect_to root_path
+        redirect_to home_path
       end
 end

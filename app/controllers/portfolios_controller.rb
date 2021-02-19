@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
     before_action :load_recipes, only: [:new, :create]
+    
     def index
         current_user
         a1 = current_user.recipes

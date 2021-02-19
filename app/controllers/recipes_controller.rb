@@ -12,7 +12,6 @@ class RecipesController < ApplicationController
     end
 
     def edit
-        # @ingredients = Ingredient.all
     end
 
     def update
@@ -30,13 +29,11 @@ class RecipesController < ApplicationController
     end
 
     def create
-        # @ingredients = Ingredient.all
         @recipe = Recipe.new(recipe_params)
         if @recipe.save
             current_user.recipes << @recipe
             redirect_to @recipe
         else
-            # @ingredients = Ingredient.all
             1.times { @recipe.ingredients.build() }
             render :new
         end
