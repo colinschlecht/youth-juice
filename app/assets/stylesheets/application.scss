@@ -110,9 +110,6 @@ $grid-breakpoints: (
         
         // ------ footer -------
 
-        .recipe-create-container{
-
-        }
 
         .footer {
                 height:10em;
@@ -270,7 +267,7 @@ $grid-breakpoints: (
                 height:10em;
                 margin-top: 0;
                 background: #000000;
-                position: relative;
+                position: fixed;
                 bottom:0;
                 left:0;
                 width:100%;
@@ -279,7 +276,7 @@ $grid-breakpoints: (
                 font-size: 0.5em;
                 text-align:center; 
                 align-content: space-between; 
-                z-index: 0;
+                z-index: -10;
         }
         
         .footer-text{

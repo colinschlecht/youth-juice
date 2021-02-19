@@ -14,9 +14,10 @@
   <body class='body'>
     <div class="welcome">
       <h1>Are you over 21?</h1>
-      <%= link_to "Yes", home_path, :class=> 'btn btn-secondary', :id=> 'age-thing'%>
-      <%= link_to "No", "https://geekprank.com/fbi-warning/",  :class=> 'btn btn-secondary' , :id=> 'age-thing'%>
-    </div>
+      <div class="button-area">
+      <%= link_to "Yes", home_path, :class=> 'btn btn-secondary'%>
+      <%= link_to "No", "https://geekprank.com/fbi-warning/",  :class=> 'btn btn-secondary' %>
+      </div>
   </body>
 
 </html>
