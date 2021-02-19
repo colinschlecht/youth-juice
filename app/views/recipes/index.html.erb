@@ -1,10 +1,13 @@
-<h1>All Drinks</h1>
+<h1 id="rec-con-title">All Concoctions</h1>
 
-<h1> Recipe </h1>
-<ul>
+
+<ul class="mainconcoctions">
 <% @recipes.each do |r| %>
-<li><%= link_to r.name, recipe_path(r) %></li>
+
+<li><%= link_to r.name, recipe_path(r), :id=>"recipe-container-small-card" %></li>
 <% end %>
 </ul>
 
+<div class="button-area">
 <%= link_to "Create a new drink", new_recipe_path, :class=> 'btn btn-secondary' %>
+</div>
