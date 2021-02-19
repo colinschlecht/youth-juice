@@ -1,12 +1,29 @@
-    <%= form.fields_for :ingredients, recipe.ingredients do |tt|%>
+<% if recipe.errors.any? %>
+    <div class="alert alert-dark" role="alert">
+        <ul>
+            <% recipe.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
 
- <h5>Unlisted Ingredient</h5>
- 
-        <%= tt.label :name %><br>
-        <%= tt.text_field :name %><br>
-        <%= tt.label :ingredient_type %><br>
-        <%= tt.select :ingredient_type, @ingredient_type %><br>
-        <%= tt.label :description %><br>
-        <%= tt.text_area :description %><br>
-         
+
+<div id="recipe-container">
+
+<%= form_with(model: recipe, local: true) do |form| %>
+
+    <%= form.label :Drink_name %> <br>
+    <%= form.text_field :name %><br>
+    <%= form.label :drink_description %><br>
+    <%= form.text_area :description %><br>
+
+
+<h5>Ingredients</h5>
+    <%= form.collection_check_boxes :ingredient_ids, @ingredients, :id, :name%>
+
+    <div class="button-area">
+        <%= form.submit :class=> 'btn btn-secondary' %>
     <% end %>
+    </div>
+</div>
