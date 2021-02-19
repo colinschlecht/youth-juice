@@ -12,6 +12,7 @@
 <h3 class="sub-heading">Ingredients:</h3>
 <% @recipe.ingredients.each do |i|%>
     <li class="ingredient-name"><%= i.name %> </li>
+    <li class="description"><%= i.ingredient_type %></li>
     <li class="description"><%= i.description %></li>
     </ul>
     </li>
