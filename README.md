@@ -1,3 +1,20 @@
+# Youth Juice 
+**DOMAIN GOES HERE**
+A web based platform built on Ruby on Rails for inspired and/or experiencd mixologists.
+
+## Description
+Youth Juice is an online platform for those like-minded drinkers to catalog, store as well as share their passion in mixology. Users will be able to create their personal account in term to start keeping track of their drink recipes in the database. Ingredients stored in the database are gladly provided to streamline the recipe creating process. If ingredient in mind is not in the database yet, the user is able to add the particular ingredient while they're crafting the recipe in an attached form or simple head to the ingredient page to do so. Users are able to bookmark recipe from other users' creation, stored at a dedicated personal recipe page. Encrypted authentication is equipted so only the creator of the recipe is authorized to alter or remove the recipe from database.
+
+## Install
+```shell
+git clone git@github.com:juliendargelos/project.git
+cd project
+```
+
+
+
+
+
 
 
 # Styling and Formatting Notes:
