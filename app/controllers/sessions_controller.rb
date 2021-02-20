@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    skip_before_action :require_login, only: [:home, :new, :create, :logout]
+    skip_before_action :require_login, only: [:age, :home, :new, :create, :logout]
 
     def home
         render :home
