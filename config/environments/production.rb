@@ -1,5 +1,5 @@
 require "active_support/core_ext/integer/time"
-APPLICATIONNAME::Application.configure do
+youth-juice::Application.configure do
   config.assets.compile = true
 end
 
