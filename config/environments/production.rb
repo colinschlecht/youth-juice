@@ -1,7 +1,4 @@
 require "active_support/core_ext/integer/time"
-youth_juice_production::Application.configure do
-  config.assets.compile = true
-end
 
 Rails.application.configure do
   
