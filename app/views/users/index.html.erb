@@ -3,7 +3,7 @@
     <h2>List of Mixologist</h2><br>
     <ul  class="ingredients-ul">
     <% @users.each do |user| %>
-        <li class="ingredient-name"><%= link_to user.username, user_path(user) %></li
+        <li class="ingredient-name"><%= link_to user.username, user_path(user) %></li>
         <li class="description">Bio: <%= user.bio %></li><br>
     <% end %>
     </ul>
